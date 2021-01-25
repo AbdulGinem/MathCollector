@@ -6,20 +6,17 @@ using UnityEngine.iOS;
 
 public class Player : MonoBehaviour
 {
-    private float distance = 0;
+    
     
 
-   
-
-    
-
-
-    void OnMouseDrag()
+    void OnMouseDown()
     {
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-        Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        if (this.gameObject.tag == "Correct") 
+        {
 
-        transform.position = objPosition;
+            Debug.Log("Correct");
+
+        }
     }
 
 
