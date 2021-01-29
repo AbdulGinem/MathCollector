@@ -19,9 +19,6 @@ public class MathGen : MonoBehaviour {
 
     public List<GameObject> optionsList = new List<GameObject>();
     GameObject choosedOption;
-
-
-
     void ChooseRandomOption()
     {
         choosedOption = optionsList[Random.Range(0, optionsList.Count)];
