@@ -2561,14 +2561,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Question: {fileID: 1469884520}
-  OptionB: {fileID: 0}
-  OptionC: {fileID: 0}
-  OptionD: {fileID: 0}
-  optionsList:
-  - {fileID: 217263680}
-  - {fileID: 910940106}
-  - {fileID: 1838798840}
-  - {fileID: 1206224326}
+  OptionA: {fileID: 1687496084}
+  OptionB: {fileID: 1009717412}
+  OptionC: {fileID: 771659901}
+  OptionD: {fileID: 1684902341}
 --- !u!114 &1469884523
 MonoBehaviour:
   m_ObjectHideFlags: 0
