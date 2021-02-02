@@ -43,6 +43,7 @@ public class MathGen : MonoBehaviour {
         a = Random.Range(0, 10);
         b = Random.Range(0, 10);
         choosedOption = optionsList[Random.Range(0, optionsList.Count -1)];
+        Debug.Log(choosedOption);
 
     }
 
