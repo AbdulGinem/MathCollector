@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 217263683}
   - component: {fileID: 217263682}
   m_Layer: 0
-  m_Name: Button
+  m_Name: A Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,7 +666,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 217263683}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MathGen, Assembly-CSharp
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &217263683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1140,7 +1152,7 @@ GameObject:
   - component: {fileID: 343306473}
   - component: {fileID: 343306472}
   m_Layer: 0
-  m_Name: StartButton
+  m_Name: Play Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1282,18 +1294,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1469884522}
-        m_TargetAssemblyTypeName: MathGen, Assembly-CSharp
-        m_MethodName: UserStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 217263680}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1334,6 +1334,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1074999866}
+        m_TargetAssemblyTypeName: MathGen, Assembly-CSharp
+        m_MethodName: UserStart
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1765,7 +1777,7 @@ GameObject:
   - component: {fileID: 910940109}
   - component: {fileID: 910940108}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: B Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1834,7 +1846,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 910940109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MathGen, Assembly-CSharp
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &910940109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2255,6 +2279,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1074999865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1074999867}
+  - component: {fileID: 1074999866}
+  m_Layer: 0
+  m_Name: MathGen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1074999866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074999865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546a7747db2b2354abcf42c4ae9999c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: {fileID: 1469884520}
+  button: {fileID: 245680841}
+  OptionA: {fileID: 1687496084}
+  OptionB: {fileID: 1009717412}
+  OptionC: {fileID: 771659901}
+  OptionD: {fileID: 1684902341}
+--- !u!4 &1074999867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074999865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 999.91534, y: -0.009187538, z: 424.3439}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1206224326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,7 +2341,7 @@ GameObject:
   - component: {fileID: 1206224329}
   - component: {fileID: 1206224328}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: D Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2337,7 +2410,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1206224329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MathGen, Assembly-CSharp
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1206224329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2433,7 +2518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2521,7 +2606,6 @@ GameObject:
   - component: {fileID: 1469884521}
   - component: {fileID: 1469884524}
   - component: {fileID: 1469884523}
-  - component: {fileID: 1469884522}
   m_Layer: 0
   m_Name: MathText
   m_TagString: Untagged
@@ -2548,23 +2632,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 450}
   m_SizeDelta: {x: 535.8, y: 147.6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1469884522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469884520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 546a7747db2b2354abcf42c4ae9999c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Question: {fileID: 1469884520}
-  OptionA: {fileID: 1687496084}
-  OptionB: {fileID: 1009717412}
-  OptionC: {fileID: 771659901}
-  OptionD: {fileID: 1684902341}
 --- !u!114 &1469884523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3321,7 +3388,7 @@ GameObject:
   - component: {fileID: 1838798843}
   - component: {fileID: 1838798842}
   m_Layer: 0
-  m_Name: Button (3)
+  m_Name: C Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3390,7 +3457,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838798843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MathGen, Assembly-CSharp
+        m_MethodName: Next
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1838798843
 MonoBehaviour:
   m_ObjectHideFlags: 0
