@@ -13,6 +13,7 @@ public class MathGen : MonoBehaviour
 {
 
     public GameObject Question;
+    public GameObject ScoreObj;
     public UnityEngine.UI.Button button;
     int a;
     int b;
@@ -60,38 +61,113 @@ public class MathGen : MonoBehaviour
 
     public void UserStart()
     {
-        UDebug.Log(Option1);
-        UDebug.Log(Option2);
-        UDebug.Log(Option3);
-        UDebug.Log(Option4);
+        Score = 0;
+        a = Random.Range(0, 10);
+        b = Random.Range(0, 10);
+        choosedOption = optionsList[Random.Range(0, optionsList.Count)];
+      
 
-
+        
 
     }
 
 
 
-    public void Next() // this is called through a Button
+    public void NextA() // this is called through a Button
     {
         if (Option1 == true)
         {
             UDebug.Log("Correct");
+            Score++;
+            CountDown.startingTime = 10f;
+            a = Random.Range(0, 10);
+            b = Random.Range(0, 10);
+            choosedOption = optionsList[Random.Range(0, optionsList.Count)];
+
+        }
+
+        if (Option1 == false)
+        {
+          
+            UDebug.Log("Not Correct");
+            button.onClick.Invoke();
+           
+        }
+
+    }
+
+    public void NextB() // this is called through a Button
+    {
+        if (Option2 == true)
+        {
+            UDebug.Log("Correct");
+            Score++;
+            CountDown.startingTime = 10f;
+            a = Random.Range(0, 10);
+            b = Random.Range(0, 10);
+            choosedOption = optionsList[Random.Range(0, optionsList.Count)];
+
+
+        }
+
+        if (Option2 == false)
+        {
+
+            UDebug.Log("Not Correct");
+            button.onClick.Invoke();
+            
+        }
+
+    }
+
+    public void NextC() // this is called through a Button
+    {
+        if (Option3 == true)
+        {
+            UDebug.Log("Correct");
+            Score++;
+            CountDown.startingTime = 10f;
+            a = Random.Range(0, 10);
+            b = Random.Range(0, 10);
+            choosedOption = optionsList[Random.Range(0, optionsList.Count)];
+
+        }
+
+        if (Option3 == false)
+        {
+
+            UDebug.Log("Not Correct");
+            button.onClick.Invoke();
+            
+        }
+
+    }
+
+    public void NextD() // this is called through a Button
+    {
+        if (Option4 == true)
+        {
+            UDebug.Log("Correct");
+            Score++;
+            CountDown.startingTime = 10f;
             a = Random.Range(0, 10);
             b = Random.Range(0, 10);
             choosedOption = optionsList[Random.Range(0, optionsList.Count)];
         }
 
-        if (Option1 || Option2 || Option3 || Option4 == false)
+        if (Option4 == false)
         {
-            UDebug.Log("I'm here");
+
             UDebug.Log("Not Correct");
             button.onClick.Invoke();
+            
         }
 
     }
     void Update()
     {
         Question.GetComponent<Text>().text = a + " + " + b;
+        ScoreObj.GetComponent<TMP_Text>().text ="Score : " + Score;
         Answer = a + b;
         Fake1 = a + b + 5;
         Fake2 = a + b + 1;
