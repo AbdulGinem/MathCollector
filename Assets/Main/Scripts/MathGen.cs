@@ -45,6 +45,8 @@ public class MathGen : MonoBehaviour
         a = Random.Range(0, 10);
         b = Random.Range(0, 10);
         choosedOption = optionsList[Random.Range(0, optionsList.Count)];
+
+        
     }
 
 
@@ -57,9 +59,12 @@ public class MathGen : MonoBehaviour
         UDebug.Log(Option3);
         UDebug.Log(Option4);
 
+
     }
 
-    public void UserStart()
+  
+
+public void UserStart()
     {
         Score = 0;
         a = Random.Range(0, 10);
@@ -79,7 +84,7 @@ public class MathGen : MonoBehaviour
         {
             UDebug.Log("Correct");
             Score++;
-            CountDown.startingTime = 10f;
+            CountDown.currentTime = 10f;
             a = Random.Range(0, 10);
             b = Random.Range(0, 10);
             choosedOption = optionsList[Random.Range(0, optionsList.Count)];
@@ -102,7 +107,7 @@ public class MathGen : MonoBehaviour
         {
             UDebug.Log("Correct");
             Score++;
-            CountDown.startingTime = 10f;
+            CountDown.currentTime = 10f;
             a = Random.Range(0, 10);
             b = Random.Range(0, 10);
             choosedOption = optionsList[Random.Range(0, optionsList.Count)];
@@ -126,7 +131,7 @@ public class MathGen : MonoBehaviour
         {
             UDebug.Log("Correct");
             Score++;
-            CountDown.startingTime = 10f;
+            CountDown.currentTime = 10f;
             a = Random.Range(0, 10);
             b = Random.Range(0, 10);
             choosedOption = optionsList[Random.Range(0, optionsList.Count)];
@@ -149,7 +154,7 @@ public class MathGen : MonoBehaviour
         {
             UDebug.Log("Correct");
             Score++;
-            CountDown.startingTime = 10f;
+            CountDown.currentTime = 10f;
             a = Random.Range(0, 10);
             b = Random.Range(0, 10);
             choosedOption = optionsList[Random.Range(0, optionsList.Count)];
@@ -216,6 +221,15 @@ public class MathGen : MonoBehaviour
         {
             OptionD.GetComponent<TMP_Text>().text = Fake4.ToString();
             Option4 = false;
+        }
+
+        if (CountDown.currentTime <= 0)
+        {
+
+            UDebug.Log("Fail");
+            button.onClick.Invoke();
+
+
         }
 
     }

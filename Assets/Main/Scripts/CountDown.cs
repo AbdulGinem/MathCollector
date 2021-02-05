@@ -5,14 +5,26 @@ using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
-    public UnityEngine.UI.Button button;
-    float currentTime = 0f;
+    
+    public static float currentTime = 10f;
     public static float startingTime = 10f;
 
     public Text countdownText;
 
-    // Start is called before the first frame update
-    public void UserStart()
+    void Start()
+    {
+
+        currentTime = 10f;
+
+    }
+    public void back()
+    {
+
+        currentTime = 10f;
+
+    }
+
+    public void UserStart2()
     {
         currentTime = startingTime;
         countdownText.color = Color.white;
@@ -27,7 +39,7 @@ public class CountDown : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
-            button.onClick.Invoke();
+            
         }
 
         if (currentTime <= 5)
