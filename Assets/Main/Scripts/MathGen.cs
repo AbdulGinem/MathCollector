@@ -14,10 +14,13 @@ public class MathGen : MonoBehaviour
 
     public GameObject Question;
     public GameObject ScoreObj;
+    public Text highscoretext;
+    public Text scoreText;
     public UnityEngine.UI.Button button;
     int a;
     int b;
-    int Score;
+    float Score;
+    int highscore;
     int Answer;
     int Fake1;
     int Fake2;
@@ -45,8 +48,6 @@ public class MathGen : MonoBehaviour
         a = Random.Range(0, 10);
         b = Random.Range(0, 10);
         choosedOption = optionsList[Random.Range(0, optionsList.Count)];
-
-        
     }
 
 
@@ -58,7 +59,7 @@ public class MathGen : MonoBehaviour
         UDebug.Log(Option2);
         UDebug.Log(Option3);
         UDebug.Log(Option4);
-
+        
 
     }
 
@@ -71,16 +72,22 @@ public void UserStart()
         b = Random.Range(0, 10);
         choosedOption = optionsList[Random.Range(0, optionsList.Count)];
       
-
-        
-
     }
 
 
 
     public void NextA() // this is called through a Button
     {
-        if (Option1 == true)
+        
+
+        if (Option1 == true && CountDown.currentTime >= 9)
+        {
+            UDebug.Log("Nice");
+            Score = Score + 100;
+            
+
+        }
+if (Option1 == true)
         {
             UDebug.Log("Correct");
             Score++;
@@ -90,7 +97,6 @@ public void UserStart()
             choosedOption = optionsList[Random.Range(0, optionsList.Count)];
 
         }
-
         if (Option1 == false)
         {
           
@@ -103,7 +109,15 @@ public void UserStart()
 
     public void NextB() // this is called through a Button
     {
-        if (Option2 == true)
+        
+        if (Option2 == true && CountDown.currentTime >= 9)
+        {
+            UDebug.Log("Nice");
+            Score = Score + 100;
+
+
+        }
+if (Option2 == true)
         {
             UDebug.Log("Correct");
             Score++;
@@ -127,7 +141,16 @@ public void UserStart()
 
     public void NextC() // this is called through a Button
     {
-        if (Option3 == true)
+        
+
+        if (Option3 == true && CountDown.currentTime >= 9)
+        {
+            UDebug.Log("Nice");
+            Score = Score + 100;
+
+
+        }
+if (Option3 == true)
         {
             UDebug.Log("Correct");
             Score++;
@@ -137,7 +160,6 @@ public void UserStart()
             choosedOption = optionsList[Random.Range(0, optionsList.Count)];
 
         }
-
         if (Option3 == false)
         {
 
@@ -150,6 +172,10 @@ public void UserStart()
 
     public void NextD() // this is called through a Button
     {
+       
+
+       
+ 
         if (Option4 == true)
         {
             UDebug.Log("Correct");
@@ -159,7 +185,13 @@ public void UserStart()
             b = Random.Range(0, 10);
             choosedOption = optionsList[Random.Range(0, optionsList.Count)];
         }
+ if (Option4 == true && CountDown.currentTime >= 9)
+        {
+            UDebug.Log("Nice");
+            Score = Score + 100;
 
+
+        }
         if (Option4 == false)
         {
 
@@ -172,7 +204,7 @@ public void UserStart()
     void Update()
     {
         Question.GetComponent<Text>().text = a + " + " + b;
-        ScoreObj.GetComponent<TMP_Text>().text ="Score : " + Score;
+        ScoreObj.GetComponent<TMP_Text>().text ="Points : " + Score;
         Answer = a + b;
         Fake1 = a + b + 5;
         Fake2 = a + b + 1;
@@ -232,8 +264,19 @@ public void UserStart()
 
         }
 
+        
+        highscore = (int)Score;
+        scoreText.text = highscore.ToString();
+
+        if (PlayerPrefs.GetInt("Score")<= highscore)
+        PlayerPrefs.SetInt("Score", highscore);
+
     }
 
+    public void highscorefun()
+    {
+        highscoretext.text = PlayerPrefs.GetInt("Score").ToString();
+    }
 
 
 

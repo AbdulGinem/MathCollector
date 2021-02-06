@@ -46,6 +46,10 @@ public class CountDown : MonoBehaviour
         {
             countdownText.color = Color.red;
         }
+        else
+        {
+            countdownText.color = Color.white;
+        }
 
 
 
